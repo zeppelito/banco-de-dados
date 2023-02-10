@@ -1,0 +1,24 @@
+
+use atividade
+
+create table aluno(
+id int auto_increment not null primary key,
+nome varchar(20) not null,
+matricula int(4) not null,
+e_mail varchar(30) not null,
+endereco varchar(30) not null,
+telefone int(13) not null,
+data_nascimento varchar(10) not null
+)
+
+alter table aluno change telefone contato varchar(10) not null
+
+create table livro(
+cod_livro int auto_increment not null primary key,
+titulo varchar(30),
+autor varchar(30),
+cod_sessao int(2),
+ISBN int(13)
+)
+
+alter table livro drop  column ISBN
